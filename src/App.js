@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { memo } from 'react';
+// import { StickyContainer, Sticky } from 'react-sticky';
+import Header from './header';
 import './App.css';
 
 function App() {
+  let list = [];
+  list.length = 100;
+  list.fill(1, 0, 100);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header >
+        <div style={{ marginTop: 52 }}>
+        {
+          list.map((item, index) => <h1 key={index}>header demo</h1>)
+        }
+        </div>
+      </Header>
     </div>
   );
 }
 
-export default App;
+export default memo(App);

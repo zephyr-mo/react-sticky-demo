@@ -1,0 +1,7 @@
+.box {
+  position: fixed;
+  top: 52px;
+  line-height: 52px;
+  width: 100%;
+  background-color: salmon;
+}
